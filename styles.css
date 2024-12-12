@@ -1,0 +1,628 @@
+@font-face {
+    font-family: 'fonte2';
+    src: url('fonte/Varino - Normal.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'fonte1';
+    src: url('fonte/nasalization-rg.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'mario';
+    src: url('fonte/Super-Mario-World.ttf') format('truetype');
+  }
+
+
+*{
+    margin: 0;
+}
+
+body {
+    margin: 0; 
+    height: 100%; 
+    background: linear-gradient(to bottom,#3C58D3, #99E1E0); 
+    background-attachment: relative;
+    background-size: cover; 
+    color: white; 
+      
+  }
+
+
+
+/* Estilo para o article */
+#inicio {
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Alinha itens em uma coluna (verticalmente) */
+    align-items: center; /* Centraliza itens horizontalmente */
+    height: 50vh; /* Define a altura igual à altura total da tela */
+    text-align: center; /* Centraliza o texto */
+    padding: 90px;
+  }
+  
+  /* Estilo para a imagem */
+  .img1 {
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites do container */
+    height: auto; /* Mantém a proporção da imagem */
+    justify-content: center; /* Centraliza itens verticalmente */
+    padding: 70px;
+  }
+  
+
+  #sobre {
+    min-height: 100vh; /* para cada seção ter no mínimo o tamanho da janela */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+  }
+
+
+
+
+.efeito, .efeito-img, .titulo, .efeito-div{ /*efeito para que suma e o JS traga de volta*/
+    visibility: hidden;
+}
+  header nav {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    display: flex;
+    justify-content: space-around; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    align-items: center;
+    height: 5vh;
+    color: white;
+    padding: 0; 
+    z-index: 1;
+  }
+  
+ 
+  header nav a {
+    font-family: 'mario';
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    line-height: 20px;
+}
+
+ a:hover{
+    text-decoration: underline 4px;
+    
+ }
+  
+  header nav .contato {    
+    font-family: 'mario';
+    font-size: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  header nav .contato:hover {
+    background-color: #0056b3;
+  }
+  
+
+  header {
+  position: relative;
+  text-align: center;
+}
+
+header img {
+  width: 100%; /* Ajusta conforme o tamanho desejado */
+  display: block; /* Remove espaçamentos extras */
+}
+
+header h1 {
+    font-size: 3em;
+    line-height: 200%;
+    color:  #ffff00;
+    text-shadow: 2px 4px 2px rgba(50, 106, 210, 0.701);
+    font-family: 'mario';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Garante que o texto fique acima da imagem */
+    background-color: rgba(0, 0, 0, 0.5); /* Opcional: Adiciona um fundo semitransparente */
+    padding: 10px; /* Espaçamento interno para melhor legibilidade */
+    border-radius: 10px; /* Bordas arredondadas para um efeito visual */
+}
+
+
+
+
+h2{
+    font-size: 200%;
+    color:#ffff00;
+    font-family: 'mario';
+    margin: 20px;
+    text-align: center;
+}
+
+
+
+p {
+    font-family: 'fonte1';
+    font-size: 110%;
+    line-height: 150%;
+    color:rgb(255, 255, 255);
+}
+
+
+
+#sobre {
+    padding: 40px 80px;
+  }
+  
+.sobre-container {
+    display: flex; 
+    align-items: center;
+    gap: 100px; 
+}
+  
+.txt-sobre {
+    flex: 1; 
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+  
+.imgyuri {
+    flex-shrink: 0; 
+    max-width: 25%; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: 2px solid yellow;
+    border-radius: 50%;
+}
+#work{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.efeito-div{
+margin: 40px;
+}
+
+.curriculo {    
+    font-family: 'mario';
+    font-size: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+ .curriculo:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+.atividades h2{
+  line-height: 80px;
+  margin-bottom: 100px;
+}
+
+.atividades{
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-container{
+  margin-top: 0px;
+}
+
+.carousel-container {
+  text-align: center;
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 5px; /* Espaçamento entre itens */
+}
+
+.carousel-item {
+  flex: 0 0 calc(50% - 10px); /* Exibir dois itens por vez com espaçamento */
+  box-sizing: border-box;
+}
+
+.img-atv {
+  width: 60%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+.conhecimento{
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.icon-conhecimento{
+  width: 100px;
+  height:100px;
+  justify-content: space-around;
+  padding: 120px 30px;
+
+}
+
+img.icon-conhecimento:hover{
+  transform: scale(1.5);
+}
+
+
+
+footer{
+  height: 105vh ;
+  background-image: url(imagens/SuperMarioMaker-Wallpaper-1920x10805.png);
+  background-attachment: relative;
+  background-size: contain; 
+
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+h3{
+  text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
+  font-size: 200%;
+  color:#04ff00;
+  font-family: 'mario';
+  line-height: 150px;
+  text-align: center;
+  
+}
+
+.img-foot {
+  width: 80px;
+  display: block;
+  margin: -41px 80px ;
+}
+
+.txt-foot{
+  text-align: center;
+  font-family: 'fonte1';
+  font-size: 110%;
+  margin-top: 34%;
+  color:rgb(13, 13, 13);
+}
+
+
+/* From Uiverse.io by ayyjayy2 */ 
+.form {
+  width: 100%;
+  height: 380%;
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+    padding: 20px;
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+  
+      position: absolute;
+      top: 150px; /* Distância do topo */
+      left: 670px; /* Distância da esquerda */
+      transform: translate(-50%, -50%); /* Centraliza caso necessário */
+      width: 250px; /* Ajuste de largura, opcional */
+      height: 240px;
+      background: rgba(140, 205, 246, 0.9); /* Fundo semi-transparente para contraste */
+      border-radius: 10px;
+      box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .form .title {
+    text-align: center;
+}
+
+  .title {
+    color: #0056b3;
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-family: 'mario';
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .input {
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 4px 10px;
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+  
+  .input:focus {
+    border: 2px solid var(--input-focus);
+  }
+  
+  .login-with {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .button-log {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    color: var(--font-color);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
+  }
+  
+  .button-log:active, .button-confirm:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+  }
+  
+  .button-confirm {
+    margin: 10px auto 0 auto;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    font-family: 'mario';
+    background-color: #01C815;
+  }
+  
+
+
+
+/*botão de contato*/
+.loader {
+    width: fit-content;
+    font-size: 17px;
+    font-family: monospace;
+    line-height: 1.4;
+    font-weight: bold;
+    padding: 30px 2px 50px;
+    position: relative;
+    overflow: hidden;
+    animation: l10-0 2s infinite cubic-bezier(1, 175, 0.5, 175);
+  }
+  .loader::before {
+    content: "CONTACT";
+    display: inline-block;
+    animation: l10-2 2s infinite;
+  }
+  .loader::after {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 28px;
+    top: 110%;
+    left: calc(50% - 16px);
+    background: linear-gradient(
+          90deg,
+          #0000 12px,
+          #f92033 0 22px,
+          #0000 0 26px,
+          #fdc98d 0 32px,
+          #0000
+        )
+        bottom 26px left 50%,
+      linear-gradient(90deg, #0000 10px, #f92033 0 28px, #fdc98d 0 32px, #0000 0)
+        bottom 24px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 10px,
+          #643700 0 16px,
+          #fdc98d 0 20px,
+          #000 0 22px,
+          #fdc98d 0 24px,
+          #000 0 26px,
+          #f92033 0 32px,
+          #0000 0
+        )
+        bottom 22px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 8px,
+          #643700 0 10px,
+          #fdc98d 0 12px,
+          #643700 0 14px,
+          #fdc98d 0 20px,
+          #000 0 22px,
+          #fdc98d 0 28px,
+          #f92033 0 32px,
+          #0000 0
+        )
+        bottom 20px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 8px,
+          #643700 0 10px,
+          #fdc98d 0 12px,
+          #643700 0 16px,
+          #fdc98d 0 22px,
+          #000 0 24px,
+          #fdc98d 0 30px,
+          #f92033 0 32px,
+          #0000 0
+        )
+        bottom 18px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 8px,
+          #643700 0 12px,
+          #fdc98d 0 20px,
+          #000 0 28px,
+          #f92033 0 30px,
+          #0000 0
+        )
+        bottom 16px left 50%,
+      linear-gradient(90deg, #0000 12px, #fdc98d 0 26px, #f92033 0 30px, #0000 0)
+        bottom 14px left 50%,
+      linear-gradient(
+          90deg,
+          #fdc98d 6px,
+          #f92033 0 14px,
+          #222a87 0 16px,
+          #f92033 0 22px,
+          #222a87 0 24px,
+          #f92033 0 28px,
+          #0000 0 32px,
+          #643700 0
+        )
+        bottom 12px left 50%,
+      linear-gradient(
+          90deg,
+          #fdc98d 6px,
+          #f92033 0 16px,
+          #222a87 0 18px,
+          #f92033 0 24px,
+          #f92033 0 26px,
+          #0000 0 30px,
+          #643700 0
+        )
+        bottom 10px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 10px,
+          #f92033 0 16px,
+          #222a87 0 24px,
+          #feee49 0 26px,
+          #222a87 0 30px,
+          #643700 0
+        )
+        bottom 8px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 12px,
+          #222a87 0 18px,
+          #feee49 0 20px,
+          #222a87 0 30px,
+          #643700 0
+        )
+        bottom 6px left 50%,
+      linear-gradient(90deg, #0000 8px, #643700 0 12px, #222a87 0 30px, #643700 0)
+        bottom 4px left 50%,
+      linear-gradient(90deg, #0000 6px, #643700 0 14px, #222a87 0 26px, #0000 0)
+        bottom 2px left 50%,
+      linear-gradient(90deg, #0000 6px, #643700 0 10px, #0000 0) bottom 0px left
+        50%;
+    background-size: 34px 2px;
+    background-repeat: no-repeat;
+    animation: inherit;
+    animation-name: l10-1;
+  }
+  @keyframes l10-0 {
+    0%,
+    30% {
+      background-position: 0 0px;
+    }
+    50%,
+    100% {
+      background-position: 0 -0.1px;
+    }
+  }
+  @keyframes l10-1 {
+    50%,
+    100% {
+      top: 109.5%;
+    }
+  }
+  @keyframes l10-2 {
+    0%,
+    30% {
+      transform: translateY(0);
+    }
+    80%,
+    100% {
+      transform: translateY(-260%);
+    }
+  }
+/*fim de botão de contato*/
