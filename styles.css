@@ -28,42 +28,16 @@ body {
       
   }
 
-
-
-/* Estilo para o article */
-#inicio {
-    display: flex; /* Ativa o Flexbox */
-    flex-direction: column; /* Alinha itens em uma coluna (verticalmente) */
-    align-items: center; /* Centraliza itens horizontalmente */
-    height: 50vh; /* Define a altura igual à altura total da tela */
-    text-align: center; /* Centraliza o texto */
-    padding: 90px;
-  }
-  
-  /* Estilo para a imagem */
-  .img1 {
-    max-width: 100%; /* Garante que a imagem não ultrapasse os limites do container */
-    height: auto; /* Mantém a proporção da imagem */
-    justify-content: center; /* Centraliza itens verticalmente */
-    padding: 70px;
-  }
-  
-
-  #sobre {
-    min-height: 100vh; /* para cada seção ter no mínimo o tamanho da janela */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px;
+  #menu-toggle{
+    display: none;
   }
 
-
-
-
-.efeito, .efeito-img, .titulo, .efeito-div{ /*efeito para que suma e o JS traga de volta*/
-    visibility: hidden;
+header img{
+    background-position: cover;
+    margin: 0;
 }
-  header nav {
+
+header nav {
     position: fixed; 
     top: 0; 
     left: 0; 
@@ -76,7 +50,7 @@ body {
     color: white;
     padding: 0; 
     z-index: 1;
-  }
+}
   
  
   header nav a {
@@ -137,9 +111,48 @@ header h1 {
 
 
 
+/* Estilo para o article */
+#inicio {
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Alinha itens em uma coluna (verticalmente) */
+    align-items: center; /* Centraliza itens horizontalmente */
+    height: 50vh; /* Define a altura igual à altura total da tela */
+    text-align: center; /* Centraliza o texto */
+    padding: 90px;
+  }
+  
+
+/* Estilo para a imagem */
+.img1 {
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites do container */
+    height: auto; /* Mantém a proporção da imagem */
+    justify-content: center; /* Centraliza itens verticalmente */
+    padding: 70px;
+  }
+  
+
+  #sobre {
+    min-height: 100vh; /* para cada seção ter no mínimo o tamanho da janela */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+  }
+
+
+
+
+.efeito, .efeito-img, .titulo, .efeito-div{ /*efeito para que suma e o JS traga de volta*/
+    visibility: hidden;
+}
+  
+
+
+
 
 h2{
     font-size: 200%;
+    text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
     color:#ffff00;
     font-family: 'mario';
     margin: 20px;
@@ -155,12 +168,18 @@ p {
     color:rgb(255, 255, 255);
 }
 
+/* Parte -#SOBRE- CONTÉM texto e imagem minha*/
 
 
 #sobre {
-    padding: 40px 80px;
-  }
-  
+  min-height: 100vh; /*para cada seção ter no mínimo o tamanho da janela*/
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  padding: 0px 20px 0px;
+}
+ 
 .sobre-container {
     display: flex; 
     align-items: center;
@@ -182,15 +201,11 @@ p {
     border: 2px solid yellow;
     border-radius: 50%;
 }
-#work{
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 
 .efeito-div{
 margin: 40px;
 }
+
 
 .curriculo {    
     font-family: 'mario';
@@ -208,6 +223,29 @@ margin: 40px;
   }
 
 
+  .conhecimento{
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  
+  .icon-conhecimento{
+    width: 90px;
+    height: 90px;
+    justify-content: space-around;
+    padding: 15px 50px;  
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  img.icon-conhecimento:hover{
+    transform: scale(1.5);
+  }
+
 
 
 .atividades h2{
@@ -220,6 +258,8 @@ margin: 40px;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
+
 }
 
 .carousel-container{
@@ -278,186 +318,56 @@ margin: 40px;
 
 
 
-.conhecimento{
-  height: 80vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-
-.icon-conhecimento{
-  width: 100px;
-  height:100px;
-  justify-content: space-around;
-  padding: 120px 30px;
-
-}
-
-img.icon-conhecimento:hover{
-  transform: scale(1.5);
-}
 
 
 
-footer{
-  height: 105vh ;
+
+.contatos{
+  height: 100vh ;
+  min-width: 100vh;
   background-image: url(imagens/SuperMarioMaker-Wallpaper-1920x10805.png);
   background-attachment: relative;
-  background-size: contain; 
+  background-size: cover; 
+  background-repeat: no-repeat;
 
 }
-
-.container {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-
+  
 h3{
+  margin-top: 5%;
+  margin-bottom: -15%;
   text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
   font-size: 200%;
-  color:#04ff00;
+  color:yellow;
   font-family: 'mario';
   line-height: 150px;
   text-align: center;
   
 }
 
-.img-foot {
-  width: 80px;
-  display: block;
-  margin: -41px 80px ;
+p{
+  font-family: 'fonte1';
+  font-size: 110%;
+  text-shadow: 1px 2px 1px #d4e304a8;
+}
+
+footer{
+  height: 5vh;
+  background-color: #D7A039;
 }
 
 .txt-foot{
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-family: 'fonte1';
-  font-size: 110%;
-  margin-top: 34%;
-  color:rgb(13, 13, 13);
+  height: 0;
+  color: #ffffff;
+  text-shadow: none;
+
 }
 
 
-/* From Uiverse.io by ayyjayy2 */ 
-.form {
-  width: 100%;
-  height: 380%;
-    --input-focus: #2d8cf0;
-    --font-color: #323232;
-    --font-color-sub: #666;
-    --bg-color: beige;
-    --main-color: black;
-    padding: 20px;
-    background: lightblue;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 20px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    box-shadow: 4px 4px var(--main-color);
-  
-      position: absolute;
-      top: 150px; /* Distância do topo */
-      left: 670px; /* Distância da esquerda */
-      transform: translate(-50%, -50%); /* Centraliza caso necessário */
-      width: 250px; /* Ajuste de largura, opcional */
-      height: 240px;
-      background: rgba(140, 205, 246, 0.9); /* Fundo semi-transparente para contraste */
-      border-radius: 10px;
-      box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
 
-  }
-  
-  .form .title {
-    text-align: center;
-}
 
-  .title {
-    color: #0056b3;
-    font-weight: 900;
-    font-size: 20px;
-    margin-bottom: 0px;
-    font-family: 'mario';
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  
-
-  .input {
-    width: 200px;
-    height: 20px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--font-color);
-    padding: 4px 10px;
-    outline: none;
-  }
-  
-  .input::placeholder {
-    color: var(--font-color-sub);
-    opacity: 0.8;
-  }
-  
-  .input:focus {
-    border: 2px solid var(--input-focus);
-  }
-  
-  .login-with {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .button-log {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    color: var(--font-color);
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  }
-  
-  .icon {
-    width: 24px;
-    height: 24px;
-    fill: var(--main-color);
-  }
-  
-  .button-log:active, .button-confirm:active {
-    box-shadow: 0px 0px var(--main-color);
-    transform: translate(3px, 3px);
-  }
-  
-  .button-confirm {
-    margin: 10px auto 0 auto;
-    width: 220px;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    font-size: 15px;
-    font-weight: 400;
-    color: white;
-    cursor: pointer;
-    font-family: 'mario';
-    background-color: #01C815;
-  }
-  
 
 
 
@@ -474,7 +384,7 @@ h3{
     animation: l10-0 2s infinite cubic-bezier(1, 175, 0.5, 175);
   }
   .loader::before {
-    content: "Contato";
+    content: "CONTACT";
     display: inline-block;
     animation: l10-2 2s infinite;
   }
@@ -626,3 +536,357 @@ h3{
     }
   }
 /*fim de botão de contato*/
+
+
+
+
+
+/* Responsividade para celulares */
+@media (max-width: 600px){
+
+  *{
+      margin: 0 0 0 0;
+      overflow-x: hidden;
+  }
+  
+  body {
+
+      margin: 0; 
+      height: 100%; 
+      background: linear-gradient(to bottom,#3C58D3, #99E1E0); 
+      background-attachment: relative;
+      color: white; 
+  }
+  
+  header h1 {
+      width: 75%;
+      font-size: 0.9em;
+      line-height: 200%;
+      color:  #ffff00;
+      text-shadow: 2px 4px 2px rgba(50, 106, 210, 0.701);
+      font-family: 'mario';
+      position: absolute;
+      top: 6%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      z-index: 1; /* Garante que o texto fique acima da imagem */
+      padding: 0px; /* Espaçamento interno para melhor legibilidade */
+      border-radius: 10px; /* Bordas arredondadas para um efeito visual */
+  }
+  
+  /*fonte do site inteiro*/
+  h2{
+      font-size: 1.0em;
+      line-height: 150%;
+      text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
+      color:#ffff00;
+      font-family: 'mario';
+      margin: 20px;
+      overflow-x: hidden;
+      width: 100%;
+  }
+  
+  h3{
+    font-size: 1.0em;
+    line-height: 150%;
+    text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
+    color:#ffff00;
+    font-family: 'mario';
+    margin: 20px;
+
+    overflow-x: hidden;
+    width: 100%;
+  }
+    
+  p {
+      font-family: 'fonte1';
+      font-size: 0.9em;
+      line-height: 150%;
+      color:rgb(255, 255, 255);
+      text-shadow: 1px 2px 1px #d4e304a8;
+      text-align: left;
+  }
+  
+  
+  header img{
+      width: 100%;
+      background-position: contain;
+      margin: 0;
+  }
+  
+  header nav {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      display: flex;
+      justify-content: space-around; 
+      background-color: rgba(0, 0, 0, 0.5); 
+      align-items: center;
+      height: 5vh;
+      color: white;
+      padding: 0; 
+      z-index: 1;
+  }
+    
+   
+    header nav a {
+      font-family: 'mario';
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      line-height: 20px;
+  }
+  
+   a:hover{
+      text-decoration: underline 4px;
+      
+   }
+    
+    header nav .contato {    
+      font-family: 'mario';
+      font-size: 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    header nav .contato:hover {
+      background-color: #0056b3;
+    }
+    
+  
+    header {
+    position: relative;
+    text-align: center;
+  }
+  
+  header img {
+    width: 100%; /* Ajusta conforme o tamanho desejado */
+    display: block; /* Remove espaçamentos extras */
+  }
+  
+  
+  #menu-toggle {
+      display:flex;
+  }
+  
+  .botão-toggle{
+      padding-right: 100%;
+      background-color: black;
+      color: white;
+      width: 30px;
+      height: 30px;
+    }
+  
+  #nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.638);
+  }
+  
+    #nav-menu a {
+      padding: 0px 0;
+      text-align: center;
+      width: 100%;
+    }
+  
+    #nav-menu.show {
+      display: flex;
+  }
+  
+  
+  
+  /* Parte que mostra o mario correndo de capa -#INICIO-*/
+  /* Estilo para o article */
+  #inicio {
+      display: flex; /* Ativa o Flexbox */
+      flex-direction: column; /* Alinha itens em uma coluna (verticalmente) */
+      align-items: center; /* Centraliza itens horizontalmente */
+      height: 50vh; /* Define a altura igual à altura total da tela */
+      text-align: center; /* Centraliza o texto */
+      padding: 40px 40px 0px;
+    }
+    
+  
+  /* Estilo para a imagem */
+  .img1 {
+      width: 50%;
+      max-width: 80%; /* Garante que a imagem não ultrapasse os limites do container */
+      height: auto; /* Mantém a proporção da imagem */
+      justify-content: center; /* Centraliza itens verticalmente */
+    }
+  
+  
+  
+    #sobre {
+      display: flex;
+      flex-direction: column; /* Para alinhar o conteúdo verticalmente */
+      align-items: center; /* Centraliza horizontalmente */
+      justify-content: center; /* Centraliza verticalmente */
+      min-height: 70vh;
+      padding: 0px 20px 0;
+      text-align: center;
+    }
+    
+    .sobre-container {
+      display: flex;
+      flex-direction: column; /* Para que o texto fique acima da imagem */
+      align-items: center; /* Centraliza os itens horizontalmente */
+      gap: 10px; /* Espaço entre o texto e a imagem */
+    }
+    
+    .efeito-div {
+      width: 100%;
+      font-size: 1rem; /* Ajusta o tamanho do texto */
+      max-width: 100%; /* Limita a largura do texto */
+      text-align: center; /* Centraliza o texto */
+    }
+    
+    .imgyuri {
+      width: 250px; /* Ajusta o tamanho da imagem */
+      height: 100px; /* Faz a imagem ficar proporcional */
+      border-radius: 50%; /* Torna a imagem circular */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 2px solid yellow;
+    }
+  
+
+    
+
+    
+  .curriculo {    
+      font-family: 'mario';
+      font-size: 15px;
+      background-color: #00f414;
+      color: rgb(255, 255, 255);
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+   .curriculo:hover {
+      background-color: #61f16f;
+    }
+  
+    .conhecimento{
+      margin: 150px 0px ;
+      height: 40vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    
+    .icon-conhecimento{
+      width: 90px;
+      height: 90px;
+      justify-content: space-around;
+      padding: 15px 10px;  
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+  
+    /* Seção do carrosel de computadores */
+  .atividades{
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+  .carousel-container {
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 0px; /* Espaçamento entre itens */
+    margin-left: 40px;
+
+  }
+  
+  .carousel-item {
+    flex: 0 0 calc(50% - 10px); /* Exibir dois itens por vez com espaçamento */
+    box-sizing: border-box;
+  }
+  
+  .img-atv {
+    width: 80%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  .prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  /*Parte final de contatos*/
+  
+  .contatos{
+      width: 100%;
+      height: 60vh;
+      background-image: url(imagens/SuperMarioMaker-Wallpaper-1920x10805.png);
+  }
+      
+    
+    
+  footer{
+      height: 10vh;
+      background-color: #D7A039;
+  }
+    
+  .txt-foot{
+      font-size: 0.9em;
+      align-items: left;
+      justify-content: left;
+      text-align: left;
+      height: 0;
+      color: #080808;
+      text-shadow: none;
+    
+  }
+  
+  
+  
+}
