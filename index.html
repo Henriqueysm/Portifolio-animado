@@ -12,30 +12,32 @@
 <body>
     <script src="reveal.js" defer></script>
 
-<header>
+<header id="menu">
+    <button class="botão-toggle" id="menu-toggle" aria-label="Abrir Menu">
+        ☰
+    </button>
 
-
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#conhecimento">Conhecimento</a>
-      <a href="#atividades">Atividades</a>
+    <nav id="nav-menu" class="hidden">
+      <a href="index.html">inicio</a>
+      <a href="#sobre">sobre</a>
+      <a href="#conhecimento">conhecimento</a>
+      <a href="#atividades">atividades</a>
       <a href="#contato"><button class="contato loader"></button></a>
     </nav>
+
+<script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+const navMenu = document.getElementById("nav-menu");
+navMenu.classList.toggle("show");
+});
+</script>
+
 
     <h1 class="animation">Bem-vindo ao meu portfolio!</h1>
 
 <img src="imagens/pixel-jeff-mario2.gif" alt="Imagem do Mario em pixel art">
 
 </header>
-
-
-
-
-
-
-
-
 
 
 
@@ -49,16 +51,19 @@
 </article>
 
 <section id="sobre">
-    <h2> Sobre mim</h2>
+    <h2 align="center"> Sobre mim</h2>
     <div class="sobre-container">
-        <div class="txt-sobre efeito-div"> 
-            <p>Me chamo Yuri Henrique, tenho 26 anos. Sou aquáriano e apaixonado pelo mundo geek. Amo Star Wars e gosto
-            de colecionar peças desse universo. Amo andar de moto e tudo o que tem a ver com tecnologia. Criei esse
-            portfólio para treinar meu conhecimento em HTML, CSS e JavaScript.</p>
-        </div>
+
+        <div class="efeito-div"> 
+            <p align="left">Me chamo Yuri Henrique, tenho 26 anos. Sou aquáriano e apaixonado pelo mundo geek. Amo Star Wars e gosto
+                de colecionar peças desse universo. Amo andar de moto e tudo o que tem a ver com tecnologia. Criei esse
+                portfólio para treinar meu conhecimento em HTML, CSS e JavaScript.
+            </p>
+        </div> 
+
         <img src="imagens/WhatsApp Image 2024-08-03 at 16.03.06.jpeg" class="imgyuri efeito-img9" alt="Foto de Yuri Henrique">
     </div>
-
+<br>
     <h2 class="" id="work"> Profissional </h2>
    
     <div class="efeito-div"> 
@@ -78,17 +83,17 @@
     <h2 id="conhecimento">Conhecimentos</h2>
 
     <div class="container-conhecimento">
-        <img src="imagens/html-5.png" class="icon-conhecimento" tittle="HTML">
+        <img src="imagens/html-5.png" class="icon-conhecimento efeito-img1" tittle="HTML">
 
-        <img src="imagens/css-3.png" class="icon-conhecimento">
+        <img src="imagens/css-3.png" class="icon-conhecimento efeito-img2">
 
-        <img src="imagens/js 1.png" class="icon-conhecimento">
+        <img src="imagens/js 1.png" class="icon-conhecimento efeito-img3">
 
-        <img src="imagens/bootstrap.png" class="icon-conhecimento">
+        <img src="imagens/bootstrap.png" class="icon-conhecimento efeito-img4">
 
-        <img src="imagens/github.png" class="icon-conhecimento">
+        <img src="imagens/github.png" class="icon-conhecimento efeito-img5">
 
-        <img src="imagens/c-.png" class="icon-conhecimento">
+        <img src="imagens/c-.png" class="icon-conhecimento efeito-img6">
 
     </div>
 
@@ -126,29 +131,15 @@
 
 
 
+<h3 align="center" id="contatos"> Contato </h3>
+<section class="contatos">
+
+ 
+</section>
 
 
-
-<footer class="contato">
-    <h3 id="contato"> Contato </h3>
-    <img src="imagens/mario e yoshi.gif" class="img-foot">
-    <div class="container">
-
-        <form action="https://api.staticforms.xyz/submit" method="post" class="form">            <div class="title">Fale comigo</div>
-            <input type="hidden" name="accessKey" value="0f613212-c86a-4b95-a652-f4d5a2cbe87b">
-                <input class="input" type="text" name="name"  autocomplete="off" placeholder="Nome" required>
-                <input class="input" type="text" name="email" autocomplete="off" placeholder="E-mail" required>
-                <textarea class="input" name="message" autocomplete="off" placeholder="Escreva para mim" required></textarea>
-           
-            <input type="hidden" name="replyTo" value="@"> <!-- Optional -->
-            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html#contato"> <!-- Optional -->
-            <input type="text" name="honeypot" style="display: none;">
-    
-            <button id="button" type="submit" class="button-confirm email"> Encaminhar →</button>
-        </form>
-    </div>
-
-    <p class="txt-foot">Todos os direitos reservados. Portfolio desenvolvido por Yuri Henrique|Dev. </p>
+<footer>
+    <p class="txt-foot" >Todos os direitos reservados. Portfolio desenvolvido por Yuri Henrique|Dev. </p>
 </footer>
 
 
