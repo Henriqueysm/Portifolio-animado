@@ -33,7 +33,7 @@ navMenu.classList.toggle("show");
 </script>
 
 
-    <h1 class="animation">Bem-vindo ao meu portfolio!</h1>
+    <h1 class="animation">Portfolio Yuri</h1>
 
 <img src="imagens/pixel-jeff-mario2.gif" alt="Imagem do Mario em pixel art">
 
@@ -106,35 +106,46 @@ navMenu.classList.toggle("show");
     <h2 id="atividades">Minhas Atividades</h2>
 
     <div class="carousel-container">
-        <button class="prev-btn">&#10094;</button>
+        <button class="prev-btn" aria-label="Anterior">&#10094;</button>
         <div class="carousel">
             <a href="https://arquivo-jedi.vercel.app/" target="_blank" class="carousel-item">
                 <img src="imagens/arquivo png.png" alt="Projeto Arquivo Jedi" class="img-atv" title="Site Arquivo Jedi - feito para aula de Dev Web">
             </a>
             <a href="https://saudeocular.vercel.app/Index.html" target="_blank" class="carousel-item">
-                <img src="imagens/clinica png.png" alt="Projeto Saúde Ocular" class="img-atv" title="Sistema de Clinica - feita para aula de Logica e Algoritmo">
+                <img src="imagens/clinica png.png" alt="Projeto Saúde Ocular" class="img-atv" title="Sistema de Clínica - feito para aula de Lógica e Algoritmo">
             </a>
             <a href="https://exerciciocalculadora.vercel.app/" target="_blank" class="carousel-item">
-                <img src="imagens/calculadora png.png" alt="Projeto Calculadora" class="img-atv" title="Calculadoras - feita para aula de Dev Web">
+                <img src="imagens/calculadora png.png" alt="Projeto Calculadora" class="img-atv" title="Calculadora - feita para aula de Dev Web">
             </a>
             <a href="https://formulario-pantera.vercel.app/" target="_blank" class="carousel-item">
                 <img src="imagens/formulario png.png" alt="Projeto Formulário" class="img-atv" title="Formulário - feito para aula de Dev Web">
             </a>
             <a href="https://tabelaperiodicayuri.vercel.app/" target="_blank" class="carousel-item">
-                <img src="imagens/tabela png.png" alt="Projeto Tabela Periódica" class="img-atv" title="Tabela Períodica - feita para aula de Dev Web">
+                <img src="imagens/tabela png.png" alt="Projeto Tabela Periódica" class="img-atv" title="Tabela Periódica - feita para aula de Dev Web">
             </a>
         </div>
-        <button class="next-btn">&#10095;</button>
+        <button class="next-btn" aria-label="Próximo">&#10095;</button>
     </div>
+    <script src="carrosel.js"></script>
 </section>
-<script src="carrosel.js"></script>
 
 
 
 <h3 align="center" id="contatos"> Contato </h3>
 <section class="contatos">
+    <form action="https://api.staticforms.xyz/submit" method="post" class="form">            <div class="title">Fale comigo</div>
+        <input type="hidden" name="accessKey" value="0f613212-c86a-4b95-a652-f4d5a2cbe87b">
+            <input class="input" type="text" name="name"  autocomplete="off" placeholder="Nome" required>
+            <input class="input" type="text" name="email" autocomplete="off" placeholder="E-mail" required>
+            <textarea class="input" name="message" autocomplete="off" placeholder="Escreva para mim" required></textarea>
+       
+        <input type="hidden" name="replyTo" value="@"> <!-- Optional -->
+        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html#contato"> <!-- Optional -->
+        <input type="text" name="honeypot" style="display: none;">
 
- 
+        <button id="button" type="submit" class="button-confirm email"> Encaminhar →</button>
+    </form>
+
 </section>
 
 
