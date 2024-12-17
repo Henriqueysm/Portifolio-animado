@@ -778,6 +778,13 @@ form{
     display: block; /* Remove espaçamentos extras */
   }
   
+  .contato{
+    display: none;
+  }
+
+.ativ{
+  display: none;
+}
   
   #menu-toggle {
       display:flex;
@@ -791,7 +798,7 @@ form{
       color: white;
       width: 30px;
       height: 30px;
-      font-size: 20px;
+      font-size: 30px;
       overflow: hidden;
     }
   
@@ -799,17 +806,18 @@ form{
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 20px;
+      top: 30px;
       right: 50px;
-      padding: 10px;
+      padding: 0px 0 160px;
       border-radius: 5px;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.638);
   }
   
     #nav-menu a {
-      padding: 0px 0;
+      padding: 15px 0 ;
       text-align: center;
       width: 100%;
+      line-height: 0px;
     }
   
     #nav-menu.show {
