@@ -28,6 +28,11 @@ body {
       
   }
 
+  .animation {
+    margin-top: 8px;
+  }
+
+
   #menu-toggle{
     display: none;
   }
@@ -119,6 +124,7 @@ header h1 {
     height: 50vh; /* Define a altura igual à altura total da tela */
     text-align: center; /* Centraliza o texto */
     padding: 90px;
+    overflow: hidden;
   }
   
 
@@ -157,6 +163,7 @@ h2{
     font-family: 'mario';
     margin: 20px;
     text-align: center;
+    
 }
 
 
@@ -259,38 +266,28 @@ margin: 40px;
   justify-content: center;
   text-align: center;
   overflow: hidden;
-
-}
-
-.carousel-container{
-  margin-top: 0px;
 }
 
 .carousel-container {
-  text-align: center;
   position: relative;
-  max-width: 80%;
-  margin: auto;
+  max-width: 100%;
   overflow: hidden;
 }
 
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  gap: 5px; /* Espaçamento entre itens */
 }
 
 .carousel-item {
-  flex: 0 0 calc(50% - 10px); /* Exibir dois itens por vez com espaçamento */
+  flex: 0 0 50%; /* 2 itens visíveis */
   box-sizing: border-box;
+  text-align: center;
 }
 
 .img-atv {
   width: 60%;
   height: auto;
-  align-items: center;
-  justify-content: center;
-  
 }
 
 .prev-btn, .next-btn {
@@ -299,24 +296,14 @@ margin: 40px;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 10px;
+  padding: 25px;
   cursor: pointer;
   z-index: 10;
+  border: none;
 }
 
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-.prev-btn:hover, .next-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
 
 
 
@@ -365,6 +352,124 @@ footer{
 
 }
 
+
+
+form{
+  position: absolute;
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, 80%); /* Ajusta o deslocamento para o centro */
+
+}
+
+/* From Uiverse.io by ayyjayy2 */ 
+.form {
+  width: 250px; /* Largura do formulário */
+  height: 240px; /* Altura do formulário */
+
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: beige;
+  --main-color: black;
+  background: lightblue;
+  background: rgba(140, 205, 246, 0.9); /* Fundo semi-transparente */
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+  
+  .form .title {
+    text-align: center;
+}
+
+  .title {
+    color: #0056b3;
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-family: 'mario';
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .input {
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 4px 10px;
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+  
+  .input:focus {
+    border: 2px solid var(--input-focus);
+  }
+  
+
+  .button-log {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    color: var(--font-color);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
+  }
+  
+  .button-log:active, .button-confirm:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+  }
+  
+  .button-confirm {
+    margin: 10px auto 0 auto;
+    width: 220px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    font-family: 'mario';
+    background-color: #01C815;
+  }
 
 
 
@@ -556,6 +661,8 @@ footer{
       background: linear-gradient(to bottom,#3C58D3, #99E1E0); 
       background-attachment: relative;
       color: white; 
+      overflow: hidden;
+
   }
   
   header h1 {
@@ -572,17 +679,18 @@ footer{
       z-index: 1; /* Garante que o texto fique acima da imagem */
       padding: 0px; /* Espaçamento interno para melhor legibilidade */
       border-radius: 10px; /* Bordas arredondadas para um efeito visual */
+      overflow: hidden;
+
   }
   
   /*fonte do site inteiro*/
   h2{
       font-size: 1.0em;
-      line-height: 150%;
       text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
       color:#ffff00;
       font-family: 'mario';
       margin: 20px;
-      overflow-x: hidden;
+      overflow: hidden;
       width: 100%;
   }
   
@@ -673,6 +781,8 @@ footer{
   
   #menu-toggle {
       display:flex;
+      width: 130px;
+      height: 30px;
   }
   
   .botão-toggle{
@@ -681,6 +791,8 @@ footer{
       color: white;
       width: 30px;
       height: 30px;
+      font-size: 20px;
+      overflow: hidden;
     }
   
   #nav-menu {
@@ -712,7 +824,7 @@ footer{
       display: flex; /* Ativa o Flexbox */
       flex-direction: column; /* Alinha itens em uma coluna (verticalmente) */
       align-items: center; /* Centraliza itens horizontalmente */
-      height: 50vh; /* Define a altura igual à altura total da tela */
+      height: 60vh; /* Define a altura igual à altura total da tela */
       text-align: center; /* Centraliza o texto */
       padding: 40px 40px 0px;
     }
@@ -753,17 +865,22 @@ footer{
     }
     
     .imgyuri {
-      width: 250px; /* Ajusta o tamanho da imagem */
-      height: 100px; /* Faz a imagem ficar proporcional */
+      width: 100%; /* Ajusta o tamanho da imagem */
+      height: 90px; /* Faz a imagem ficar proporcional */
       border-radius: 50%; /* Torna a imagem circular */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       border: 2px solid yellow;
     }
   
+    .efeito-div{
+      text-align-last: center;
+    }
 
-    
+    .carousel-item {
+      flex: 0 0 100%; /* 1 item visível em telas menores */
+  }
 
-    
+
   .curriculo {    
       font-family: 'mario';
       font-size: 15px;
@@ -799,66 +916,9 @@ footer{
     }
     
   
-    /* Seção do carrosel de computadores */
-  .atividades{
-    height: 80vh;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-}
-
-
-  .carousel-container {
-    text-align: center;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 0px; /* Espaçamento entre itens */
-    margin-left: 40px;
-
-  }
-  
-  .carousel-item {
-    flex: 0 0 calc(50% - 10px); /* Exibir dois itens por vez com espaçamento */
-    box-sizing: border-box;
-  }
-  
-  .img-atv {
-    width: 80%;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-    
-  }
-  
-  .prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .prev-btn {
-    left: 10px;
-  }
-  
-  .next-btn {
-    right: 10px;
-  }
-  
-  .prev-btn:hover, .next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+    .atividades{
+      display: none;
+    }
   
   
   /*Parte final de contatos*/
@@ -869,18 +929,19 @@ footer{
       background-image: url(imagens/SuperMarioMaker-Wallpaper-1920x10805.png);
   }
       
-    
+ 
+  .form {
+ margin: -50% 0% 0% 0%;
+}
     
   footer{
+    display: none;
       height: 10vh;
       background-color: #D7A039;
   }
     
   .txt-foot{
       font-size: 0.9em;
-      align-items: left;
-      justify-content: left;
-      text-align: left;
       height: 0;
       color: #080808;
       text-shadow: none;
