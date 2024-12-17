@@ -25,6 +25,11 @@
       <a href="#contatos"><button class="contato loader"></button></a>
     </nav>
 
+
+    <main>
+    
+    </main>
+    
 <script>
         document.getElementById("menu-toggle").addEventListener("click", function () {
 const navMenu = document.getElementById("nav-menu");
@@ -35,10 +40,8 @@ navMenu.classList.toggle("show");
 
     <h1 class="animation">Portfolio Yuri</h1>
 
-<img src="imagens/pixel-jeff-mario2.gif" alt="Imagem do Mario em pixel art">
 
 </header>
-
 
 
 
@@ -106,7 +109,7 @@ navMenu.classList.toggle("show");
     <h2 id="atividades">Minhas Atividades</h2>
 
     <div class="carousel-container">
-        <button class="prev-btn" aria-label="Anterior">&#10094;</button>
+
         <div class="carousel">
             <a href="https://arquivo-jedi.vercel.app/" target="_blank" class="carousel-item">
                 <img src="imagens/arquivo png.png" alt="Projeto Arquivo Jedi" class="img-atv" title="Site Arquivo Jedi - feito para aula de Dev Web">
@@ -128,6 +131,76 @@ navMenu.classList.toggle("show");
     </div>
     <script src="carrosel.js"></script>
 </section>
+
+
+
+<h2 align="center" id="atividades" class="mobile">Minhas Atividades</h2> 
+<section class="carrosel-slider">
+
+
+    <button class="btn-voltar mobile" id="btn-voltar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+    </button>
+    
+
+    <ul class="lista mobile">
+
+        <li class="cartao selecionado">
+            <div class="container-imagem">
+                <a href="https://arquivo-jedi.vercel.app/" target="_blank">
+                    <img src="imagens/arquivo png.png"  alt="Projeto Arquivo Jedi" class="imagem-card">
+                </a>
+            </div>
+        </li>
+
+        <li class="cartao">
+            <div class="container-imagem">
+                <a href="https://saudeocular.vercel.app/Index.html" target="_blank" >
+                <img src="imagens/clinica png.png" alt="Projeto Saúde Ocular" class="imagem-card">
+                </a>
+            </div>
+        </li>
+
+        <li class="cartao">
+            <div class="container-imagem">
+                <a href="https://exerciciocalculadora.vercel.app/" target="_blank" >
+                <img src="imagens/calculadora png.png" alt="Projeto Calculadora" class="imagem-card">
+                </a>
+            </div>
+         </li>
+
+         
+        <li class="cartao">
+            <div class="container-imagem">
+                <a href="https://formulario-pantera.vercel.app/" target="_blank" >
+                <img src="imagens/formulario png.png" alt="Projeto Formulário" class="imagem-card">
+                </a>
+            </div>
+         </li>
+
+
+         
+        <li class="cartao">
+            <div class="container-imagem">
+                <a href="https://tabelaperiodicayuri.vercel.app/" target="_blank" >
+                <img src="imagens/tabela png.png" alt="Projeto Tabela Periódica"  class="imagem-card">
+                </a>
+            </div>
+         </li>
+    </ul>
+
+
+    <button class="mobile" id="btn-avancar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+          </svg>
+    </button>
+</section>
+
+<script src="carrosel 2.js">
+</script>
 
 
 
